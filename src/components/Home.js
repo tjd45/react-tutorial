@@ -1,7 +1,7 @@
 import React from "react";
 
 //config
-import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL, API_KEY } from "../config";
+import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from "../config";
 //components
 import HeroImage from './HeroImage';
 import Grid from './Grid';
@@ -32,7 +32,7 @@ const Home = () => {
                 />
                 : null}
             <SearchBar setSearchTerm={setSearchTerm} />
-            <Grid header={searchTerm ? 'Search Result' : 'Popular Movies'}>
+            <Grid header={searchTerm ? 'Search Results' : 'Popular Movies'}>
                 {state.results.map(movie => (
                     <Thumb
                         key={movie.id}
